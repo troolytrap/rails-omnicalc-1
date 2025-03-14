@@ -1,4 +1,4 @@
-class OperationsController < ApplicationsController
+class OperationsController < ApplicationController
 
   def square
     render({ :template => "operations/square" })
@@ -33,3 +33,4 @@ class OperationsController < ApplicationsController
 
     render({ :template => "results/random" })
   end
+end
