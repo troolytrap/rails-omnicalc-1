@@ -1,0 +1,19 @@
+<h1>Payment Results</h1>
+
+APR
+<div>
+<%=params.fetch("apr").to_f%>%
+<div>
+Number of years
+<div>
+<%=params.fetch("numberofyears").to_f%>
+<div>
+Principal
+<div>
+$<%=params.fetch("principal").to_f.round(2)%>
+<div>
+Payment
+<div>
+<%=(((@apr/1200)*(@principal))/(1-(1+@apr/1200) ** (@numberofyears*-12))).to_fs(:currency)%>
+<div>
+<a href= "/payment/new">Calculate another payment</a>

@@ -14,20 +14,20 @@ class OperationsController < ApplicationController
     render({ :template => "operations/random" })
   end
 
-  def square_results
+  def squareresults
     render({ :template => "results/square" })
   end
-  def sqrt_results
+  def sqrtresults
     render({ :template => "results/sqrt" })
   end
-  def payment_results
+  def paymentresults
     @apr = params.fetch("apr").to_f
    @numberofyears = params.fetch("numberofyears").to_f
    @principal = params.fetch("principal").to_f
     render({ :template => "results/payment" })
   end
 
-  def random_results
+  def randomresults
     @randmin = params.fetch("user_min").to_f
     @randmax = params.fetch("user_max").to_f
 

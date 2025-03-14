@@ -1,0 +1,15 @@
+<h1>Random Results</h1>
+
+Minimum
+<div>
+<%=params.fetch("user_min").to_f%>
+<div>
+Maximum
+<div>
+<%=params.fetch("user_max").to_f%>
+<div>
+Random Number
+<div>
+<%=rand(@randmin.. @randmax)%>
+<div>
+<a href= "/sqrt/new">Pick another random number</a>
